@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --bg-color-primary: #0D0125;
-    --font-color-primary: #FFF8EE;
-    --font-color-secundary: #C8BAD6;
+    --bg-color-a: #0D0125;
+    --bg-color-b: #FFF8EE;
+    --font-color-a: #FFF8EE;
+    --font-color-b: #C8BAD6;
+    --cover-color: #FF65C3;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Inter, sans-serif;
-    color: var(--font-color-primary);
 }
 
 header {
-    background-color: var(--bg-color-primary);
+    background-color: var(--bg-color-a);
     padding-left: 72px;
     padding-right: 72px;
     display: flex;
@@ -26,19 +26,21 @@ header {
 
 .logo {
     display: flex;
+    align-items: center;
+    flex-direction: row;
     gap: 12px;
     margin: 22.65px 0px 22.65px 0px;
-    flex-direction: row;
 }
 
-.menu-top .menu {
+.menu {
     display: flex;
-    align-items: center;
     list-style: none;
+    align-items: center;
     gap: 34px;
 }
 
-.menu-top .menu li a {
+.menu li a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -49,11 +51,31 @@ header {
 }
 
 .acesso a {
+    color: inherit;
     text-decoration: none;
 }
 
+.btn {
+    background-color: var(--cover-color);
+    border: none;
+    min-height: 52px;
+    padding: 0 22px;
+    border-radius: 999px;
+}
+
+.btn a {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/*Início do body*/
+
+body {
+    color: var(--font-color-a);
+    background-color: var(--bg-color-a);
+    font-family: Inter, sans-serif;
+}
 #apresentacao {
-    background-color: var(--bg-color-primary);
     display: flex;
     min-height: 620px;
     padding: 72px 72px 72px 72px;
@@ -62,43 +84,43 @@ header {
     gap: 72px;
 }
 
-#apresentacao .cta {
+.cta {
     max-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-#apresentacao .cta h2 {
+.cta h2 {
     font-size: 64px;
     line-height: 104%;
     font-weight: 400;
     text-wrap: balance;
 }
 
-#apresentacao .cta h2 span {
+.cta h2 span {
     color: #FF65C3;
 }
 
-#apresentacao .cta p {
+.cta p {
     color: #c9c3e0;
     line-height: 1.5;
     max-width: 520px;
 }
 
-#apresentacao .cta .final-cta {
+.final-cta {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#apresentacao .cta .final-cta .info-final-cta {
+.info-final-cta {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#apresentacao .cta .final-cta .botao-final-cta {
+.botao-final-cta {
     display: flex;
     height: 52px;
     padding: 0 22px;
@@ -110,15 +132,7 @@ header {
     background: #FF65C3;
 }
 
-#apresentacao .cta .final-cta .botao-final-cta a {
-    text-decoration: none;
-}
-
-#apresentacao .cta .final-cta .botao-final-cta a strong {
-    color: #0D0125;
-}
-
-#apresentacao .cta .final-cta .info-final-cta p {
+.info-final-cta p {
     color: #C8BAD6;
     font-size: 11px;
     font-style: normal;
@@ -127,33 +141,44 @@ header {
     max-width: 120px;
 }
 
-#apresentacao .previa {
+.botao-final-cta a {
+    text-decoration: none;
+}
+
+.botao-final-cta a strong {
+    color: #0D0125;
+}
+
+/* Div Prévia */
+
+.previa {
     display: flex;
     flex-direction: column;
-    background-color: var(--font-color-primary);
+    background-color: var(--bg-color-b);
     min-width: 458px;
     gap: 18px;
     padding: 22px;
     border-radius: 32px;
+    box-shadow: 0 12px 36px 0 #ff65c347;
 }
 
-#apresentacao .previa * {
-    color: var(--bg-color-primary);
+.previa p{
+    color: var(--bg-color-a);
 }
 
-#apresentacao .previa .top {
+.top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#apresentacao .previa .top .identificacao {
+.identificacao {
     display: flex;
     gap: 9px;
     align-items: center;
 }
 
-#apresentacao .previa .top .identificacao .user {
+.user {
     color: #6D6274;
     font-family: Inter;
     font-size: 11px;
@@ -162,31 +187,31 @@ header {
     line-height: normal;
 }
 
-#apresentacao .resumo {
+.resumo {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: var(--bg-color-primary);
+    background-color: var(--bg-color-a);
     padding: 20px;
     border-radius: 24px;
 }
 
-#apresentacao .resumo .informacoes {
+.informacoes {
     display: flex;
     flex-direction: column;
     gap: 7px;
 }
 
-#apresentacao .resumo .informacoes p {
+.informacoes p {
     color: var(--font-color-secundary);
     font-size: 11px;
 }
 
-#apresentacao .resumo .informacoes h2 {
+.informacoes h2 {
     color: var(--font-color-primary);
 }
 
-#apresentacao .resumo .trending {
+.trending {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -195,12 +220,16 @@ header {
     padding: 5px 9px;
 }
 
-#apresentacao .resumo .trending .icon-trending {
+.trending p {
+    color: #6EDEAE;
+}
+
+.icon-trending {
     width: 12px;
     height: 12px;
 }
 
-#apresentacao .resumo .trending .text-trending {
+.text-trending {
     color: #6EDEAE;
     font-family: Inter;
     font-size: 10px;
@@ -208,7 +237,7 @@ header {
     line-height: normal;
 }
 
-#apresentacao .evolucao {
+.evolucao {
     display: flex;
     align-items: stretch;
     flex-direction: column;
@@ -219,14 +248,19 @@ header {
     background: #ffffff
 }
 
-#apresentacao .evolucao .temp {
+.temp {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-#apresentacao .evolucao .titulo-evolucao {
+.grafico img {
+    width: 100%;
+    max-width: 548px;
+}
+
+.titulo-evolucao {
     color: #180C28;
     font-size: 13px;
     font-style: normal;
@@ -234,7 +268,7 @@ header {
     line-height: normal;
 }
 
-#apresentacao .evolucao .info-evolucao {
+.info-evolucao {
     color: #6D6274;
     font-size: 10px;
     font-style: normal;
@@ -242,13 +276,15 @@ header {
     line-height: normal;
 }
 
-#apresentacao .evolucao .trending-evolucao P {
+.trending-evolucao P {
     color: #BB3186;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
+/*Div Benefícios*/
 
 #beneficios {
     display: flex;
@@ -260,7 +296,7 @@ header {
     background: #FAEBD6;
 }
 
-#beneficios .selo {
+.selo {
     display: flex;
     padding: 7px 12px;
     align-items: center;
@@ -270,7 +306,7 @@ header {
     background: rgba(255, 101, 195, 0.10);
 }
 
-#beneficios .selo p {
+.selo p {
     color: #BB3186;
     font-size: 11px;
     font-style: normal;
@@ -280,7 +316,7 @@ header {
     text-transform: uppercase;
 }
 
-#beneficios .titulo h2 {
+.titulo h2 {
     color: #180C28;
     font-size: 36px;
     font-style: normal;
@@ -289,14 +325,14 @@ header {
     max-width: 550px;
 }
 
-#beneficios .grid {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 18px;
     width: 100%;
 }
 
-#beneficios .grid .grid-bloco {
+.grid-bloco {
     display: flex;
     padding: 26px;
     height: 248px;
@@ -308,14 +344,14 @@ header {
     background: #FFF8EE;
 }
 
-#beneficios .grid .grid-bloco .top-grid-bloco {
+.top-grid-bloco {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
 }
 
-#beneficios .grid .grid-bloco .top-grid-bloco p {
+.top-grid-bloco p {
     color: #BB3186;
     font-size: 10px;
     font-style: normal;
@@ -324,7 +360,7 @@ header {
     text-transform: uppercase;
 }
 
-#beneficios .grid .grid-bloco h4 {
+.grid-bloco h4 {
     color: #180C28;
     font-size: 21px;
     font-style: normal;
@@ -332,7 +368,7 @@ header {
     line-height: normal;
 }
 
-#beneficios .grid .grid-bloco p {
+.grid-bloco p {
     color: #6D6274;
     font-size: 14px;
     font-style: normal;
