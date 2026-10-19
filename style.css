@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    color: var(--font-color-primary);
 }
 
 header {
@@ -20,11 +22,6 @@ header {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-}
-
-body {
-    font-family: Inter, sans-serif;
-    color: var(--font-color-primary);
 }
 
 .logo {
@@ -65,46 +62,46 @@ body {
     gap: 72px;
 }
 
-.cta {
+#apresentacao .cta {
     max-width: 700px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.cta h2 {
+#apresentacao .cta h2 {
     font-size: 64px;
     line-height: 104%;
     font-weight: 400;
     text-wrap: balance;
 }
 
-.cta h2 span {
+#apresentacao .cta h2 span {
     color: #FF65C3;
 }
 
-.cta p {
+#apresentacao .cta p {
     color: #c9c3e0;
     line-height: 1.5;
     max-width: 520px;
 }
 
-.cta .final-cta {
+#apresentacao .cta .final-cta {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.final-cta .info-final-cta {
+#apresentacao .cta .final-cta .info-final-cta {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.final-cta .botao-final-cta {
+#apresentacao .cta .final-cta .botao-final-cta {
     display: flex;
     height: 52px;
-    padding: 22px;
+    padding: 0 22px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -113,7 +110,7 @@ body {
     background: #FF65C3;
 }
 
-.botao-final-cta a {
+#apresentacao .cta .final-cta .botao-final-cta a {
     text-decoration: none;
 }
 
@@ -245,7 +242,7 @@ body {
     line-height: normal;
 }
 
-#apresentacao .evolucao .trending-evolucao p {
+#apresentacao .evolucao .trending-evolucao P {
     color: #BB3186;
     font-size: 13px;
     font-style: normal;
@@ -279,6 +276,7 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    letter-spacing: undefined;
     text-transform: uppercase;
 }
 
