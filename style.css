@@ -356,13 +356,11 @@ body {
     max-width: 350px;
 }
 
-/* Imagens nunca passam do tamanho do container */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* ---------- Tablet (até 1024px) ---------- */
 @media (max-width: 1024px) {
   header,
   #apresentacao,
@@ -399,7 +397,6 @@ img {
   }
 }
 
-/* ---------- Celular (até 768px) ---------- */
 @media (max-width: 768px) {
   header,
   #apresentacao,
@@ -414,7 +411,7 @@ img {
   }
 
   .menu-top {
-    display: none; /* ver nota sobre menu hambúrguer abaixo */
+    display: none; 
   }
 
   #apresentacao {
