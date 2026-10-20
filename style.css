@@ -2,10 +2,11 @@
 
 :root {
     --bg-color-a: #0D0125;
-    --bg-color-b: #FFF8EE;
+    --bg-color-b: #FAEBD6;
     --font-color-a: #FFF8EE;
     --font-color-b: #C8BAD6;
-    --cover-color: #FF65C3;
+    --cover-color-a: #FF65C3;
+    --cover-color-b: #FFF8EE;
 }
 
 * {
@@ -56,7 +57,7 @@ header {
 }
 
 .btn {
-    background-color: var(--cover-color);
+    background-color: var(--cover-color-a);
     border: none;
     min-height: 52px;
     padding: 0 22px;
@@ -75,6 +76,7 @@ body {
     background-color: var(--bg-color-a);
     font-family: Inter, sans-serif;
 }
+
 #apresentacao {
     display: flex;
     min-height: 620px;
@@ -162,7 +164,7 @@ body {
     box-shadow: 0 12px 36px 0 #ff65c347;
 }
 
-.previa p{
+.previa p {
     color: var(--bg-color-a);
 }
 
@@ -341,18 +343,18 @@ body {
     gap: 18px;
     border-radius: 24px;
     border: 1px solid #E7D7C2;
-    background: #FFF8EE;
+    background-color: var(--cover-color-b);
 }
 
-.top-grid-bloco {
+.grid-bloco .top-grid-bloco {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
 }
 
-.top-grid-bloco p {
-    color: #BB3186;
+.grid-bloco .top-grid-bloco p {
+    color: var(--cover-color-a);
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
@@ -375,4 +377,56 @@ body {
     font-weight: 400;
     line-height: 155%;
     max-width: 350px;
+}
+
+/*Div Indicadores*/
+
+#indicadores {
+    display: flex;
+    padding: 54px 72px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.grid-indicadores {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.texto h4 {
+    color: #FFF8EE;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.texto p {
+    color: #C8BAD6;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%;
+    max-width: 300px;
+}
+
+.chamada-final {
+    background-color: var(--bg-color-b);
+    display: flex;
+    padding: 70px 72px;
+}
+
+.chamada-final .bloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 52px 58px;
+    border-radius: 32px;
+    background: #FF65C3;
+}
+
+.bloco * {
+    color: black;
 }
